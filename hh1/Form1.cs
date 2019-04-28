@@ -30,6 +30,7 @@ namespace hw2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             saveFileDialog1.Title = "Browse";
             saveFileDialog1.Filter = "Scheduling Document (*.*) | *.*";
 
@@ -38,8 +39,9 @@ namespace hw2
 
             string sFilePath = saveFileDialog1.FileName;
             if (sFilePath == "") return;
-
-            Run_Simulated_Annealing_Method(sFilePath);
+            */
+            //Run_Simulated_Annealing_Method(sFilePath);
+            Run_Simulated_Annealing_Method("");
         }
 
         private void Run_Simulated_Annealing_Method(string FileName)
@@ -62,9 +64,9 @@ namespace hw2
             Optimal = AG.Optimal;
             Optimal_x = AG.Optimal_x;
             Optimal_y = AG.Optimal_y;
-
-            x.Text = Convert.ToString(Optimal_x);
-            y.Text = Convert.ToString(Optimal_y);
+            
+            txtx.Text = Convert.ToString(Optimal_x);
+            txty.Text = Convert.ToString(Optimal_y);
             txtf.Text = Convert.ToString(Optimal);
         }
 
@@ -74,6 +76,11 @@ namespace hw2
         }
 
         private void txtx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
